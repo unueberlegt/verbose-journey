@@ -1,12 +1,12 @@
 import json
 from flask import (Flask, render_template, redirect,
                    url_for, request, make_response,
-                  flash)
+                   flash)
 from options import DEFAULTS
 
 app = Flask(__name__)
 
-app.secret_key = 'kafg5467hkziagfkhazg3457kjga12435sdhkäjfgkgfjhgkasdjghfaks'
+app.secret_key = '9b1aec7c0e9d91b4b8120a266a840654a8d548c397f3c05c'
 
 
 def get_saved_data():
@@ -16,9 +16,9 @@ def get_saved_data():
         data = {}
     return data
 
+
 @app.route('/')
 def index():
-    data = get_saved_data()
     return render_template('index.html', saves=get_saved_data())
 
 
